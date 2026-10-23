@@ -1,131 +1,162 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>My Weather App Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my food menu</title>
+<style>
+    body {
 
-    <style>
-        /* Universal selector: applies basic settings to the full page */
-        * {
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+        font-family: Arial;
 
-        /* Body background uses colour, image pattern, repeat, position, and attachment */
-        body {
-            background-color: #87ceeb;
-            background-image: radial-gradient(circle, white 2px, transparent 3px);
-            background-size: 40px 40px;
-            background-repeat: repeat;
-            background-position: top center;
-            background-attachment: fixed;
-            color: white;
-            text-align: center;
-        }
+        background: #fff8f0;
 
-        h1 {
-            font-size: 36px;
-            color: white;
-        }
+        padding: 30px;
 
-        .subtitle {
-            font-size: 18px;
-            color: #f0f8ff;
-        }
+        text-align: center;
 
-        .weather-card {
-            width: 400px;
-            border: 3px solid white;
-            border-radius: 20px;
-            background-image: linear-gradient(to bottom right, #1e90ff, #87cefa);
-        }
+    }
 
-        .weather-icon {
-            font-size: 70px;
-            animation: floatCloud 3s infinite alternate;
-        }
+    h1 {
 
-        #temperature {
-            font-size: 48px;
-            font-weight: bold;
-            color: #fffacd;
-        }
+        color: #e65c00;
 
-        .details {
-            font-size: 18px;
-            color: white;
-        }
+    }
 
-        .forecast-section {
-            width: 600px;
-            border: 3px solid white;
-            border-radius: 15px;
-            background-image: radial-gradient(circle, white, #add8e6);
-            color: #003366;
-        }
+    /* Sibling Selector - styles the paragraph right after h1 */
 
-        .forecast-title {
-            color: #003366;
-        }
+    h1+p {
 
-        .day {
-            border: 2px solid #4682b4;
-            font-size: 17px;
-            color: #003366;
-        }
+        background: #ffe0b2;
 
-        /* Group selector: styles both headings together */
-        h2,
-        h3 {
-            color: white;
-        }
+        padding: 10px 20px;
 
-        /* CSS animation using @keyframes */
-        @keyframes floatCloud {
-            from {
-                transform: translateY(0);
-            }
+        border-radius: 8px;
 
-            to {
-                transform: translateY(20px);
-            }
-        }
-    </style>
-</head>
+        color: #bf360c;
 
-<body>
+        display: inline-block;
 
-    <h1>My Weather App Homepage</h1>
+    }
 
-    <p class="subtitle">
-        Check today's weather and plan your day better.
-    </p>
+    ul {
 
-    <div class="weather-card">
-        <h2>Today's Weather</h2>
+        padding: 0;
 
-        <div class="weather-icon">Cloud</div>
+        margin-top: 20px;
 
-        <p id="temperature">28°C</p>
+    }
 
-        <p class="details">City: Bengaluru</p>
-        <p class="details">Condition: Partly Cloudy</p>
-        <p class="details">Humidity: 62%</p>
-        <p class="details">Wind Speed: 12 km/h</p>
-    </div>
+    /* Child Selector - styles only direct li children of ul */
 
-    <h2>Weekly Forecast</h2>
+    ul>li {
 
-    <div class="forecast-section">
-        <h3 class="forecast-title">Next 5 Days</h3>
+        list-style: none;
 
-        <p class="day">Monday: Sunny - 30°C</p>
-        <p class="day">Tuesday: Cloudy - 27°C</p>
-        <p class="day">Wednesday: Rainy - 24°C</p>
-        <p class="day">Thursday: Windy - 26°C</p>
-        <p class="day">Friday: Stormy - 23°C</p>
-    </div>
+        font-size: 18px;
 
+        font-weight: bold;
+
+        color: #5d4037;
+
+        padding: 10px 20px;
+
+        margin: 6px auto;
+
+        width: 260px;
+
+        background: #fff3e0;
+
+        border-radius: 8px;
+
+    }
+
+    /* nth-child - highlights the 3rd item as Chef's Special */
+
+    ul li:nth-child(3) {
+
+        background: #ffe082;
+
+        color: #e65c00;
+
+    }
+
+    .desc {
+
+        color: #555;
+
+        margin-top: 20px;
+
+        font-size: 15px;
+
+        max-width: 400px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    /* first-letter - makes the first letter big and bold */
+
+    .desc::first-letter {
+
+        font-size: 220%;
+
+        color: #e65c00;
+
+        font-weight: bold;
+
+    }
+
+    .links {
+
+        margin-top: 25px;
+
+    }
+
+    /* Hover Effect - links glow when mouse moves over them */
+
+    a {
+
+        color: #e65c00;
+
+        text-decoration: none;
+
+        font-size: 15px;
+
+        margin: 0 12px;
+
+        padding: 8px 18px;
+
+        border: 2px solid #e65c00;
+
+        border-radius: 8px;
+
+    }
+
+    a:hover {
+
+        background: #e65c00;
+
+        color: white;
+
+    }
+</style>
+    <ul>
+        <li>pizza</li>
+        <li>burger</li>
+        <li>fries</li>
+        <li>tacos-chefs favourite</li>
+        <li>noodles</li>
+        <li>icecream</li>
+    </ul>
+
+    <p class="desc">every dish on this menu is made with love.try and find your favourite</p>
+
+    <div class="links">
+        <a href="#">order now</a>
+        <a href="#">see more</a>
+        </div>
 </body>
-
 </html>
