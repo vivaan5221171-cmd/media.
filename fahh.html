@@ -2,136 +2,151 @@
 <html>
 
 <head>
-    <title>My Fitness Routine Cards</title>
-
+    <title>Zoo Rescue Tracker</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f7f4;
-            color: #222222;
+            background: #f1fff0;
+            padding: 25px;
+            padding-top: 70px;
+            min-height: 1200px;
+        }
+
+        h1,
+        h2 {
+            color: #2d6a4f;
         }
 
         h1 {
             text-align: center;
-            color: darkgreen;
         }
 
-        .intro {
-            width: 800px;
-            margin: 20px auto;
-            padding: 15px;
-            border: 2px solid darkgreen;
-            background-color: #ffffff;
-        }
-
-        .routine-card {
-            width: 250px;
-            height: 260px;
-            float: left;
-            margin: 20px;
-            padding: 18px;
-            border: 3px solid seagreen;
-            background-color: #ffffff;
-        }
-
-        .routine-card h2 {
-            color: darkblue;
-            font-size: 22px;
-        }
-
-        .routine-card p {
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        .time {
-            color: darkred;
+        .alert {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #2d6a4f;
+            color: white;
+            padding: 14px;
+            text-align: center;
             font-weight: bold;
         }
 
-        .clear-section {
-            clear: both;
+        .animal {
+            background: #d8f3dc;
+            border: 2px solid #2d6a4f;
+            padding: 10px;
+            margin: 8px 0;
+            width: 220px;
         }
 
-        .note {
-            width: 800px;
-            margin: 20px auto;
-            padding: 15px;
-            border: 2px dashed orange;
-            background-color: #fff8e1;
+        .moved {
+            position: relative;
+            left: 35px;
+            background: #95d5b2;
+        }
+
+        .card {
+            position: relative;
+            background: white;
+            border: 2px solid #52b788;
+            border-radius: 10px;
+            padding: 25px;
+            width: 230px;
+            text-align: center;
+        }
+
+        .tag {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #f77f00;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .zone {
+            position: sticky;
+            top: 50px;
+            background: #2d6a4f;
+            color: white;
+            padding: 10px;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+
+        .case {
+            background: white;
+            border: 2px solid #52b788;
+            padding: 10px;
+            margin: 8px 0;
+            width: 230px;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #d8f3dc;
+            color: #1b4332;
+            padding: 2px 5px;
+            border-radius: 4px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>My Fitness Routine Cards</h1>
+    <div class="alert">Zoo Rescue Alert - Emergency team active | Fixed</div>
 
-    <div class="intro">
-        <p>
-            This page shows a simple weekly fitness routine. Each card has its own
-            content area, padding, border, and margin.
-        </p>
+    <h1>Zoo Rescue Tracker</h1>
+    <p style="text-align:center;">Learn CSS positioning by placing animal cards, rescue tags, and sticky zone labels.
+    </p>
+
+    <h2>Static Positioning</h2>
+    <p>Static is the default position. Animal entries appear one below another.</p>
+    <div class="animal">Lion - Resting zone</div>
+    <div class="animal">Elephant - Water zone</div>
+    <div class="animal">Penguin - Ice zone</div>
+
+    <h2>Relative Positioning</h2>
+    <p>The rescued animal entry moves slightly using <code>left: 35px</code>.</p>
+    <div class="animal">Giraffe - Checkup pending</div>
+    <div class="animal moved">Rescued Koala - Safe</div>
+    <div class="animal">Zebra - Feeding zone</div>
+
+    <h2>Absolute Positioning</h2>
+    <p>The rescue tag is placed on the animal card using absolute positioning.</p>
+    <div class="card">
+        Panda<br>
+        Medical check complete
+        <div class="tag">SAFE</div>
     </div>
 
-    <div class="routine-card">
-        <h2>Morning Stretch</h2>
-        <p>
-            Start the day with simple stretches for your arms, legs, back, and neck.
-        </p>
-        <p class="time">Time: 10 minutes</p>
-    </div>
+    <h2>Fixed Positioning</h2>
+    <p>The green rescue alert at the top stays fixed even when you scroll.</p>
 
-    <div class="routine-card">
-        <h2>Cardio Workout</h2>
-        <p>
-            Do jumping jacks, jogging, or skipping to improve stamina and energy.
-        </p>
-        <p class="time">Time: 20 minutes</p>
-    </div>
+    <h2>Sticky Positioning</h2>
+    <p>The rescue zone label sticks near the top while scrolling.</p>
 
-    <div class="routine-card">
-        <h2>Strength Training</h2>
-        <p>
-            Practise squats, push-ups, and planks to build body strength.
-        </p>
-        <p class="time">Time: 15 minutes</p>
-    </div>
+    <div class="zone">Rescue Zone Cases - Sticky</div>
 
-    <div class="clear-section"></div>
+    <div class="case">Tiger - Observation</div>
+    <div class="case">Deer - Released</div>
+    <div class="case">Owl - Night care</div>
+    <div class="case">Turtle - Shell treatment</div>
+    <div class="case">Rabbit - Healthy</div>
+    <div class="case">Flamingo - Wing check</div>
+    <div class="case">Monkey - Play area</div>
+    <div class="case">Horse - Recovery stable</div>
 
-    <div class="routine-card">
-        <h2>Yoga Time</h2>
-        <p>
-            Try simple yoga poses to improve balance, flexibility, and focus.
-        </p>
-        <p class="time">Time: 15 minutes</p>
-    </div>
-
-    <div class="routine-card">
-        <h2>Evening Walk</h2>
-        <p>
-            Go for a relaxing walk to stay active and refresh your mind.
-        </p>
-        <p class="time">Time: 25 minutes</p>
-    </div>
-
-    <div class="routine-card">
-        <h2>Rest and Hydrate</h2>
-        <p>
-            Drink enough water and take proper rest after completing your workout.
-        </p>
-        <p class="time">Time: All day</p>
-    </div>
-
-    <div class="clear-section"></div>
-
-    <div class="note">
-        <p>
-            Fitness Tip: A good routine includes exercise, rest, healthy food,
-            and consistency.
-        </p>
-    </div>
+    <h2>top, right, bottom, left</h2>
+    <p>
+        Use <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>
+        to control where positioned elements appear.
+    </p>
 
 </body>
 
