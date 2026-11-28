@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <body>
-    <h2>javascript string methods</h2>
-    <p>basic methods</p>
+
+<body>
+    <h2>javascript for loop</h2>
+    <p id="demo"></p>
     <script>
-        var str = "AmAzInG";
-        document.write(str.toUpperCase());
-         document.write("<br>");
-         document.write(str.toLowerCase());
-         document.write("<br>");
-         document.write(str.startsWith('i'))
-         document.write("<br>")
-
-         var strl = "I learnt about methods";
-         var pat = new RegExp("about");
-         var res = pat.test(str);
-         document.write(res);
-
+        var fruits = ["apple","banana","grapes","watermelon","apple"];
+        var text = "";
+        var i;
+        for (i = 0; i < fruits.length; i++) {
+            text += fruits[i] + "<br>"
+        }
+        document.getElementById('demo').innerHTML = text;
     </script>
     </body>
+
     </html>
+    
